@@ -1,5 +1,3 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -15,7 +13,5 @@ public:
 	ABomberMan_012025GameMode();
 public:
 	virtual void BeginPlay() override;
+	int MurosCreados;
 };
-
-
-

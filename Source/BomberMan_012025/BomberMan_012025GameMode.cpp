@@ -20,5 +20,11 @@ void ABomberMan_012025GameMode::BeginPlay()
 	// Create a new Enemigo
 	GEngine->AddOnScreenDebugMessage(-1, -1, FColor::Red, TEXT("Muro Spawning"));
 
-	AMuro* muro01 = GetWorld()->SpawnActor<AMuro>(AMuro::StaticClass(), FVector(934.0f, 1370.0f, 100.0f), FRotator(0.0f, 0.0f, 0.0f));
+	MurosCreados = 0;
+	for (int i = 0; i < 8; i++)
+	{
+		//crea los muros
+		AMuro* muro01 = GetWorld()->SpawnActor<AMuro>(AMuro::StaticClass(), FVector(500.0f + i * 100, 300.0f + i * 100, 100.0f), FRotator(0.0f, 0.0f, 0.0f));
+	}
+
 }
